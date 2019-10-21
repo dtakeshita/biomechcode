@@ -1,0 +1,6 @@
+name	grade	height
+a	100	170
+b	200	168
+c	300	190
+d	400	155
+e		170
