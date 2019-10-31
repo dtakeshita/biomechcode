@@ -2,7 +2,7 @@ clear;
 close all;
 y0 = 10;
 %% solving ODE with the Euler method
-h = 0.5;
+h = 0.1;
 N = 100;%number of simulated time steps
 t = h*[0:N-1];%for plotting
 y = zeros(N,1);%allocate memory
