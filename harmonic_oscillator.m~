@@ -1,3 +1,0 @@
-function harmonic_oscillator(y,m,k)
-    M = [0 1;-k/m 0];
-end
