@@ -1,0 +1,17 @@
+%generation of random numbers
+clear
+close all
+%% uniform distribution
+x = rand(10,1);%a vector of random numbers from uniform distribution
+y = rand(3);%a matrix of random numbers from uniform distribution
+z = rand(10000,1);
+histogram(z)%draw a histogram
+
+% central limit theorem
+N = 1000;
+w = rand(N);
+w_sum = sum(w,1);
+subplot(2,2,1)
+histogram(w,'normalization','pdf')
+subplot(2,2,2)
+histogram(w_sum/N,'normalization','pdf')
