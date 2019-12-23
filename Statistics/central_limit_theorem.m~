@@ -1,6 +1,6 @@
 % demonstration of the central limit theorem
-clear; close all;
-n_sum = 10;
+cle
+n_sum = 5;
 n_sample = 5000;
 w = rand(n_sum,n_sample);%uniform distribution from [0 1]
 mu = 0.5;%mean of the uniform distribution
