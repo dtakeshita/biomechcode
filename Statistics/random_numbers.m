@@ -28,21 +28,7 @@ histogram(z7)
 title('sum of three random variables with uniform distribution')
 
 %% Nomral distribution (Gaussian distribution)
-close all
 v = randn(10000,1);%Standard normal distribution (mean:0, standard distribution 1)
 w = randn(10000,1);
-a = v + 2;
-b = 2*v;
-c = v + w;
-d = w + b;%sigma^2(d) = sigma^2(w) + sigma^2(b)
-e = v + b;
-mean(v)
-mean(a)
-mean(c)
-var(v)
-var(a)
-var(c)
-histogram(c)
-
-
-
+figure;
+histogram(v)
