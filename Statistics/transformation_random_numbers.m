@@ -4,7 +4,8 @@ v = randn(10000,1);%Standard normal distribution (mean:0, standard distribution 
 w = randn(10000,1);
 % transformation of random variables
 a = v + 2;
-b = 3*v;%var(b) = 2^2*var(v)
+alpha = 3;
+b = alpha*v;%var(b) = alpha^2*var(v)
 c = v + w;
 d = w + b;%var(d) = var(w) + var(b) if they are statistically independent
 e = v + b;%does this follow the formula above?
@@ -41,7 +42,7 @@ title(str_ttl)
 subplot(2,4,4)
 histogram(b,'normalization','pdf')
 xlabel('x');ylabel('Probability density')
-str_ttl = {'b=2*v'; sprintf('var(b)=%.3g',var(b));...
+str_ttl = {sprintf('b=%d*v',alpha); sprintf('var(b)=%.3g',var(b));...
             sprintf('mean(b)=%.3g',mean(b))};
 title(str_ttl)
 

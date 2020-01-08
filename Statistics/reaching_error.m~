@@ -1,0 +1,29 @@
+clear;close all;
+r1 = 0.5;
+r2 = 0.5;
+theta1_eq = 7/32*pi;
+theta2_eq = 9/32*pi;
+sd = 1/32*pi;
+N = 50;
+% create uncorrelated noise
+dtheta1 = sd*randn(N,1);
+dtheta2 = sd*randn(N,1);
+% uncorrelated case
+theta1 = theta1_eq + dtheta1;
+theta2_uncorr = theta2_eq + dtheta2;
+figure;
+xend_uncorr = arrayfun(@(i)reaching_plot(r1,r2,theta1(i),theta2_uncorr(i)),...
+    1:N,'unif',0)
+title('uncorrelated case')
+xend_uncorr = cat(1,xend_uncorr{:});
+% correlated - synergetic case
+c = 0.95;
+dtheta2_syn = -c*dtheta1 + sqrt(1-c^2)*dtheta2;
+theta2_syn = theta2_eq + dtheta2_syn;
+
+figure;
+arrayfun(@(i)reaching_plot(r1,r2,theta1(i),theta2_syn(i)),...
+    1:N,'unif',0)
+% correlated - non-synergetic case
+
+

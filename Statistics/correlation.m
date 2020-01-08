@@ -3,7 +3,7 @@ N = 10000;
 x = 5*randn(N,1);
 y = 5*randn(N,1);
 % generate random numbers correlated with x and y
-c = 0.9;
+c = 0.5;
 z = c*x + sqrt(1-c^2)*y;
 %% calculate covariant matrix
 C_xy = cov(x,y);
