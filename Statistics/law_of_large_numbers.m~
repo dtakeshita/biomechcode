@@ -5,7 +5,7 @@ clear
 close all
 N = 100000;
 mu = 5;%mean
-sigma = 3;%standard deviation
+sigma = sqrt(10);%standard deviation
 %% initialization
 mu_set = zeros(3,1);
 var_set = mu_set; 
@@ -33,6 +33,16 @@ hold on
 h2 = histogram(y_ave,'Normalization','pdf', 'DisplayStyle', 'stairs', 'linewidth',lw);
 h3 = histogram(y_ave2,'Normalization','pdf', 'DisplayStyle', 'stairs', 'linewidth',lw);
 xlabel('Value'); ylabel('Probability density');
+legend([h h2 h3], {'No average','10 averages', '100 averages'})
+%% plot standard deviation as a function of number of averages
+figure
+subplot(1,2,1)
+n_ave = [1 10 100];%number of averages
+plot(n_ave,v,'o')%linear scale
+title('Linear scale')
+xlabel('Number of averages');ylabel('
+subplot(1,2,2)
+loglog(n_ave,v)
 
 
 
