@@ -1,11 +1,11 @@
 clear;close all;
 r1 = 0.5;
 r2 = 0.5;
-theta1_eq = 7/32*pi;
-theta2_eq = 9/32*pi;
+theta1_eq = 8/32*pi;
+theta2_eq = 3/4*pi;
 sd = 1/32*pi;
 N = 50;
-plot_range = [0 1];
+plot_range = [-0.5 1];
 % create uncorrelated noise
 dtheta1 = sd*randn(N,1);
 dtheta2 = sd*randn(N,1);
