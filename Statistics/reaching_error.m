@@ -39,4 +39,3 @@ xend_nonsyn =arrayfun(@(i)reaching_plot(r1,r2,theta1(i),theta2_nonsyn(i)),...
 xend_nonsyn = cat(1,xend_nonsyn{:});
 title('Non-synergetic case')
 set(gca,'xlim',plot_range,'ylim',plot_range);
-
